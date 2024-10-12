@@ -442,3 +442,50 @@ body {
 }
 
 
+.contact {
+    background-color: #f9f9f9; /* Color de fondo claro */
+    padding: 4rem 5rem; /* Espaciado alrededor de la sección */
+}
+
+.contact-content {
+    display: flex; /* Permite alinear los elementos hijos */
+    justify-content: space-between; /* Distribuye el espacio entre columnas */
+}
+
+.contact-form-container {
+    width: 60%; /* Ajusta el ancho según sea necesario */
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column; /* Organiza los elementos en una columna */
+}
+
+.form-controls {
+    margin-bottom: 1rem; /* Espaciado entre los campos */
+    padding: 10px; /* Espaciado interno */
+    border: 1px solid #ccc; /* Borde */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+.form-btn {
+    margin-top: 1rem; /* Espaciado superior para los botones */
+}
+    
+.contact-details {
+    width: 35%; /* Ajusta el ancho según sea necesario */
+    display: flex;
+    flex-direction: column; /* Organiza los elementos en una columna */
+}
+
+.contact-heading {
+    font-size: 1.2rem; /* Tamaño de fuente para los encabezados */
+    color: #333; /* Color del texto */
+}
+
+.contact-text {
+    font-size: 1rem; /* Tamaño de fuente para el texto */
+    color: #666; /* Color del texto */
+}
+
+
