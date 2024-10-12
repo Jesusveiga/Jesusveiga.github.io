@@ -175,66 +175,80 @@ body {
     color: #fff; 
 } 
 
-/* Contact section styles */
-.contact { 
-    padding: 4rem 5rem; 
-    background: #f8f9fa; /* Light background for contrast */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow */
-} 
+/* Portfolio section styles */
+.portfolio {
+    margin: 4.8rem 0;
+    padding: 0 5rem;
+}
 
-.contact-content { 
-    display: flex; 
-    justify-content: space-between; 
-    align-items: flex-start; 
-    margin-top: 2rem; 
-} 
+.portfolio-heading {
+    margin-bottom: 2rem;
+}
 
-.contact-form-container { 
-    width: 50%; 
-} 
+/* Flexbox for aligning items side by side */
+.my-row {
+    display: flex;
+    gap: 2rem; /* Adds space between the columns */
+    justify-content: space-between; /* Distributes columns evenly */
+}
 
-.contact-form { 
-    display: flex; 
-    flex-direction: column; 
-} 
+.my-col {
+    flex: 1; /* Ensures both columns take up equal space */
+    max-width: 48%; /* Prevents columns from getting too wide */
+}
 
-.contact-form .form-controls { 
-    width: 100%; 
-    padding: 10px; 
-    margin: 1.5rem 0; 
-    border: 1px solid #ccc; 
-    border-radius: 5px; 
-    transition: border-color 0.3s; 
-} 
+.port-card {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
 
-.contact-form .form-controls:focus { 
-    border-color: #06594f; /* Color on focus */
-    outline: none; /* Remove outline */
-} 
+.port-card:hover {
+    transform: translateY(-10px);
+}
 
-.contact-form .form-btn { 
-    margin-top: 1rem; 
-} 
+.port-card .image {
+    width: 100%;
+    height: 250px; /* Same height for both video and image */
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    overflow: hidden;
+}
 
-.contact-details { 
-    width: 40%; 
-    padding-left: 2rem; /* Spacing between form and details */
-} 
+.port-card .image img,
+.port-card .image video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; /* Makes sure the media fits nicely */
+}
 
-.details { 
-    margin-bottom: 1.5rem; 
-} 
+.greet-heading {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #033073;
+    margin: 1rem 0;
+    text-align: center;
+}
 
-.contact-heading { 
-    font-weight: bold; 
-    color: #011547; /* Darker color for better visibility */
-} 
+.greet-heading a:hover {
+    color: #06518D;
+    text-decoration: underline;
+}
 
-.contact-text { 
-    margin: 0; 
-    color: #666; /* Softer color for text */
-} 
+
+/* Adjust row for better layout */
+.my-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-around;
+}
+
 
 
 /* Footer Styles */
@@ -371,3 +385,94 @@ body {
 .blue-text { 
     color: #363D73; 
 }
+
+
+
+/* Modal Styles - Modern Look */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; 
+    z-index: 1000; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Slightly darker overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s ease; /* Smooth fade-in transition */
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    width: 400px;
+    max-width: 90%; /* Adjust for smaller screens */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Softer shadow */
+    text-align: center;
+    position: relative;
+    animation: slide-down 0.4s ease-out; /* Add a slide-down animation */
+}
+
+.modal-content h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.modal-btn {
+    flex: 1;
+    padding: 12px;
+    background-color: #06518D; /* Updated color for modern look */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth hover */
+    text-decoration: none;
+    display: inline-block;
+}
+
+.modal-btn:hover {
+    background-color: #053d68; /* Slightly darker on hover */
+    transform: translateY(-2px); /* Adds a subtle hover effect */
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 1.5rem;
+    color: #888; /* Neutral color for the close button */
+    cursor: pointer;
+    transition: color 0.3s ease; /* Smooth hover */
+}
+
+.close:hover {
+    color: #000; /* Darker on hover */
+}
+
+/* Animations */
+@keyframes slide-down {
+    from {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+
