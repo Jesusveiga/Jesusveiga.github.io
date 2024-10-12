@@ -17,3 +17,32 @@ hamburger.addEventListener('click', function () {
         menu.style.display = "block"
     } 
 });
+
+
+// Get the modal
+var modal = document.getElementById('modal-survival');
+
+// Get the open modal link
+var openModalLinks = document.querySelectorAll('.open-modal');
+
+// Get the close button (X)
+var closeModal = document.getElementsByClassName("close")[0];
+
+// When the user clicks the link or image, open the modal
+openModalLinks.forEach(link => {
+    link.onclick = function() {
+        modal.style.display = "flex";
+    };
+});
+
+// When the user clicks on X, close the modal
+closeModal.onclick = function() {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
