@@ -7,7 +7,7 @@
     <meta charset="UTF-8"> 
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0"> 
-    <title>My Portfolio</title> 
+    <title>Portfolio</title> 
     <link rel="stylesheet"
         href= 
 "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
@@ -78,37 +78,44 @@
         </div> 
     </section> 
 
-    <!-- Portfolio Section -->
-    <section class="portfolio" id="portfolio"> 
-        <div class="portfolio-heading"> 
-            <h1 class="my-heading text-center">Featured Portfolio</h1> 
-        </div> 
-        <div class="portfolio-content"> 
-            <div class="my-row"> 
-                <div class="my-col"> 
-                    <div class="my-card port-card"> 
-                        <div class="image"> 
-                            <p>If you cannot access the report, you can watch this preview :</p> <!-- Disclaimer -->
-                                <video width="100%" height="250px" controls>
-                                    <source src="CV.mp4" type="video/mp4">
-                                    Your browser does not support the video tag.
-                                </video>
-                        </div> 
-                        <a href="https://app.powerbi.com/groups/me/reports/9d9e5a13-58dd-47df-ab7c-15ebcb5c36c6/1719ef8bd8af929751c4?experience=power-bi" target="_blank">
-                            <h3 class="greet-heading blue-text">Power BI CV</h3>
-                        </a>
-                        <!--<p class="small-para blue-text">Designing</p>--> 
+<!-- Portfolio Section -->
+<section class="portfolio" id="portfolio"> 
+    <div class="portfolio-heading"> 
+        <h1 class="my-heading text-center">Featured Portfolio</h1> 
+    </div> 
+    <div class="portfolio-content"> 
+        <div class="my-row"> 
+            <!-- First Portfolio Item -->
+            <div class="my-col"> 
+                <div class="my-card port-card"> 
+                    <div class="image"> 
+                        <p class="video-disclaimer">If you cannot access the report, you can watch this preview:</p> <!-- Disclaimer -->
+                        <video width="100%" height="100%" controls>
+                            <source src="CV.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
                     </div> 
+                    <a href="https://app.powerbi.com/groups/me/reports/9d9e5a13-58dd-47df-ab7c-15ebcb5c36c6/1719ef8bd8af929751c4?experience=power-bi" target="_blank">
+                        <h3 class="greet-heading blue-text">Power BI CV</h3>
+                    </a>
                 </div> 
-                <div class="my-col"> 
-                    <div class="my-card port-card"> 
-                        <!--<div class="image"> 
-                            <img src="Work_in_Progress_minimalistic.jpg"
-                                alt="Web Development Image"> 
-                        </div>--> 
-                        <h1 class="greet-heading blue-text" style="font-size: 3rem;"> 
-                            Work In Progress... 
-                        </h1> 
+            </div> 
+
+            <!-- Second Portfolio Item -->
+            <div class="my-col"> 
+                <div class="my-card port-card"> 
+                    <div class="image"> 
+                        <a href="#modal-survival" class="open-modal">
+                            <img src="survival.png" alt="Survival Analysis Image" style="width: 100%; height: 100%;"> 
+                        </a>
+                    </div> 
+                    <h1 class="greet-heading blue-text" style="font-size: 1rem;">
+                        <a href="#modal-survival" class="open-modal" style="text-decoration: none; color: inherit;">
+                            Survival Analysis on Lung Cancer Patients
+                        </a>
+                    </h1>
+                        
+                        
                         <!--<p class="small-para blue-text">Development</p>--> 
                     </div> 
                 </div> 
@@ -164,6 +171,19 @@
             </div> 
         </div> 
     </section> 
+
+
+    <!-- Modal Structure -->
+    <div id="modal-survival" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Select a Document</h2>
+            <div class="modal-buttons">
+                <a href="SurvivalAnalysis No Code.pdf" target="_blank" class="modal-btn">Survival Analysis Document</a>
+                <a href="SurvivalAnalysis.pdf" target="_blank" class="modal-btn">Survival Analysis (Code included)</a>
+            </div>
+        </div>
+    </div>
 
     <!-- About Section -->
     <section id="about" class="about"> 
