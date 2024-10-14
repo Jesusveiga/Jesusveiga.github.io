@@ -1,6 +1,6 @@
 /* index.css */
 /* Styles defined for the desktop and larger screen devices */
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 /* Global Styles */
 body { 
@@ -20,6 +20,7 @@ body {
     top: 0; 
     width: 100%; 
     background: linear-gradient(90deg, #011547, #033073, #06518D);
+    z-index: 1000; 
 } 
 
 .logo { 
@@ -204,20 +205,23 @@ body {
 }
 
 .port-card {
-    background-image: linear-gradient(45deg, #74D7BB, #53C8B6, #35A99C); /* Colores vibrantes */
+    background-image: linear-gradient(45deg, #74D7BB, #53C8B6, #35A99C); /* Vibrant colors */
     border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
     display: flex;
-    flex-direction: column; /* Para centrar el contenido */
-    justify-content: center; /* Centrar verticalmente */
-    align-items: center; /* Centrar horizontalmente */
-    height: 200px; /* Altura fija para las tarjetas */
-    padding: 1rem; /* Añadir padding interno a las tarjetas */
+    flex-direction: column; /* Center content */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    height: 200px; /* Fixed height for cards */
+    padding: 1rem; /* Add internal padding to cards */
     overflow: hidden; 
 }
 
-
+.port-card:hover {
+    transform: translateY(-5px) scale(1.05); /* Elevation effect on hover with slight scaling */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
 
 .coming-soon {
     background-color: rgba(255, 255, 255, 0.8); /* White background with transparency */
@@ -229,10 +233,6 @@ body {
     color: #fff; /* Text color */
     margin: 0; /* No margin */
     padding: 1rem; /* Internal padding */
-}
-
-.port-card:hover {
-    transform: translateY(-5px); /* Elevation effect on hover */
 }
 
 .image img {
@@ -262,6 +262,11 @@ body {
     background-color: #f9f9f9; /* Light background */
     border-radius: 10px; /* Rounded borders */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: box-shadow 0.3s ease; /* Smooth transition for shadow effect */
+}
+
+.contact-form-container:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
 }
 
 .form-group {
@@ -299,6 +304,10 @@ body {
     color: #fff; 
     text-decoration: none; 
 } 
+
+.footer-links:hover {
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño al pasar el ratón */
+}
 
 .social-links { 
     display: flex; 
