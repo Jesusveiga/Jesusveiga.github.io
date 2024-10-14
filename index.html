@@ -7,6 +7,7 @@
     <title>Portfolio</title> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
     <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css" /> <!-- AOS CSS -->
 </head> 
 
 <body> 
@@ -54,14 +55,14 @@
     </section> 
 
     <!-- Portfolio Section -->
-    <section class="portfolio" id="portfolio"> 
+    <section class="portfolio" id="portfolio" data-aos="fade-up" data-aos-duration="1000" style="padding-top: 70px;">
         <div class="portfolio-heading"> 
             <h1 class="my-heading text" style="color: #35A99C;">Portfolio</h1> 
         </div> 
         <div class="portfolio-content"> 
             <div class="my-row"> 
                 <!-- First Portfolio Item -->
-                <div class="my-col"> 
+                <div class="my-col" data-aos="fade-up" data-aos-duration="1000"> 
                     <a href="https://app.powerbi.com/groups/me/reports/9d9e5a13-58dd-47df-ab7c-15ebcb5c36c6/1719ef8bd8af929751c4?experience=power-bi" target="_blank">
                         <div class="my-card port-card"> 
                             <div class="image"> 
@@ -73,7 +74,7 @@
                 </div>
 
                 <!-- Second Portfolio Item -->
-                <div class="my-col"> 
+                <div class="my-col" data-aos="fade-up" data-aos-duration="1000"> 
                     <a href="#modal-survival" class="open-modal">
                         <div class="my-card port-card"> 
                             <div class="image"> 
@@ -85,7 +86,7 @@
                 </div>
 
                 <!-- Empty Portfolio Item -->
-                <div class="my-col"> 
+                <div class="my-col" data-aos="fade-up" data-aos-duration="1000"> 
                     <div class="my-card port-card coming-soon"> 
                         <div class="image"> 
                             <h3 class="greet-heading blue-text">Coming Soon...</h3>
@@ -109,7 +110,7 @@
     </div>
 
     <!-- About Section -->
-    <section id="about" class="about"> 
+    <section id="about" class="about" data-aos="fade-up" data-aos-duration="1000"> 
         <div class="about-content"> 
             <div class="about-text"> 
                 <h1 class="my-heading">About Me</h1> 
@@ -129,7 +130,7 @@
     </section>
 
     <!-- Contact Me Section -->
-    <section class="contact" id="contact"> 
+    <section class="contact" id="contact" data-aos="fade-up" data-aos-duration="1000"> 
         <div class="contact-content"> 
             <div class="contact-form-container"> 
                 <h2 class="contact-heading">Get in Touch</h2> 
@@ -184,6 +185,10 @@
     </footer> 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" integrity="sha512-uKQ39gEGiyUJl4AI6L+ekBdGKpGw4xJ55+xyJG7YFlJokPNYegn9KwQ3P8A7aFQAUtUsAQHep+d/lrGqrbPIDQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script> <!-- AOS JS -->
+    <script>
+        AOS.init(); // Initialize AOS
+    </script>
     <script src="script.js"></script> 
 </body> 
 
