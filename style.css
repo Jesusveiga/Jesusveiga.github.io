@@ -1,12 +1,14 @@
-/*index.css*/
-/* Styles defined for the desktop or the bigger screen devices*/
+/* index.css */
+/* Styles defined for the desktop and larger screen devices */
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap'); 
 
+/* Global Styles */
 body { 
     margin: 0; 
     padding: 0; 
     box-sizing: border-box; 
     font-family: 'Poppins', sans-serif; 
+    overflow-x: hidden; /* Prevent horizontal scroll */
 } 
 
 /* Header Navbar Styles */
@@ -18,11 +20,10 @@ body {
     top: 0; 
     width: 100%; 
     background: linear-gradient(90deg, #011547, #033073, #06518D);
-    background-color: transparent; 
 } 
 
 .logo { 
-    padding: 0 5rem; 
+    padding: 0 1rem; /* Reduce padding to avoid overflow */
 } 
 
 .logo .logo-heading { 
@@ -30,7 +31,7 @@ body {
 } 
 
 .menu { 
-    padding: 0 5rem; 
+    padding: 0; /* Remove padding for mobile */
 } 
 
 .hamburger { 
@@ -52,17 +53,88 @@ body {
     padding: 0.5rem 1rem; 
 } 
 
-@media screen and (min-width: 856px) and (max-width: 1024px) { 
-    .menu-list .menu-list-items { 
-        padding: 0.5rem 0.3rem; 
-    } 
-} 
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Stack items vertically on mobile */
+    }
+
+    .hamburger {
+        display: block; /* Show hamburger icon on mobile */
+    }
+
+    .menu {
+        display: none; /* Hide menu by default */
+        flex-direction: column; /* Show menu in column */
+        width: 100%; /* Full width */
+    }
+
+    .menu.active {
+        display: flex; /* Show menu when it has the 'active' class */
+    }
+
+    .menu-list-items {
+        padding: 1rem; /* Increase padding for better clickability */
+        width: 100%; /* Ensure each item takes full width */
+    }
+
+    .hero {
+        height: 60vh; /* Reduce height on mobile */
+        justify-content: center; /* Center content */
+        padding: 1rem; /* Adjust padding */
+    }
+
+    .about {
+        padding: 4rem 0; /* Add space above and below About Me section */
+    }
+    
+    .portfolio {
+        padding: 2rem; /* Spacing around the section */
+    }
+    
+    .portfolio-heading {
+        margin-bottom: 2rem; /* Additional space below portfolio title */
+    }
+    
+    .about-content {
+        display: flex;
+        justify-content: space-between;
+        width: 100%; /* Ensure container takes full width */
+        flex-wrap: wrap; /* Allow wrapping on small screens */
+    }
+    
+    .about-text {
+        flex: 1; /* Use available space */
+        padding: 1rem; /* Add spacing */
+        min-width: 300px; /* Maintain minimum width for text */
+    }
+    
+    .about-image {
+        flex: 1; /* Use available space */
+        padding: 1rem; /* Add spacing */
+    }
+    
+    .about-image img {
+        max-width: 100%; /* Ensure image is responsive */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .my-row {
+        flex-direction: column; /* Stack items in column on mobile */
+        align-items: center; /* Center items */
+    }
+
+    .my-col {
+        width: 100%; /* Ensure each column takes full width */
+        margin-bottom: 2rem; /* Space between cards on mobile */
+    }
+}
 
 /* Main Hero Section Styles */
 .hero { 
     background-image: url('data-analyst.jpg'); 
     background-repeat: no-repeat; 
-    background-size: 100% 100%; 
+    background-size: cover; /* Maintain proportions */
     width: 100%; 
     height: 100vh; 
     display: flex; 
@@ -83,173 +155,126 @@ body {
     justify-content: space-evenly; 
 } 
 
-/* About section styles */
+/* About Section Styles */
 .about { 
     display: flex; 
     align-items: center; 
     background-image: linear-gradient(45deg, #363D73, #2794B3); 
     justify-content: space-between; 
     width: 100%; 
+    flex-wrap: wrap; /* Allow elements to wrap */
 } 
 
 .about .about-text { 
-    width: 450px; 
+    flex: 1; /* Use available space */
     color: #fff; 
-    padding: 5rem 1rem 5rem 5rem; 
+    padding: 2rem; /* Adjust padding */
+    min-width: 300px; /* Maintain minimum width */
 } 
 
 .about .about-image img { 
-    height: 400px; 
-    width: 450px; 
-    padding: 5rem 5rem 5rem 1rem; 
+    max-height: 400px; /* Maintain responsiveness */
+    width: 100%; /* Ensure image occupies full width */
+    padding: 5rem 1rem; /* Adjust padding */
 } 
 
-/* Portfolio section styles */
-.portfolio { 
-    margin: 4.8rem 0; 
-    padding: 0 5rem; 
-} 
-
-.port-card { 
-    padding: 0 !important; 
-    background: none !important; 
-    border: 2px solid #000; 
-} 
-
-.port-card .image { 
-    width: 100%; 
-} 
-
-.port-card .image img { 
-    height: 250px; 
-    width: 100%; 
-    border-top-right-radius: 20px; 
-    border-top-left-radius: 20px; 
-} 
-
-/* Services section styles */
-.services { 
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
-    flex-direction: column; 
-    margin: 4.8rem 0; 
-    padding: 0 5rem; 
-} 
-
-.my-row { 
-    display: flex; 
-    align-items: center; 
-    justify-content: space-between; 
-    margin: 2rem 0; 
-} 
-
-.my-row .my-col { 
-    text-align: center; 
-    width: 30%; 
-} 
-
-.my-card { 
-    text-align: center; 
-    display: flex; 
-    flex-direction: column; 
-    align-items: center; 
-    justify-content: center; 
-    border-radius: 20px; 
-    background-image: linear-gradient(#74D7BB, #53C8B6, #35A99C); 
-    padding: 1rem; 
-} 
-
-.icon { 
-    height: 100px; 
-    width: 100px; 
-    border-radius: 50%; 
-    background-color: #363D73; 
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
-} 
-
-.icon svg { 
-    font-size: 30px; 
-    color: #fff; 
-} 
-
-/* Portfolio section styles */
+/* Portfolio Section Styles */
 .portfolio {
-    margin: 4.8rem 0;
-    padding: 0 5rem;
+    padding: 2rem; /* Spacing around the section */
 }
 
-.portfolio-heading {
-    margin-bottom: 2rem;
+.portfolio-content {
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow cards to wrap on small screens */
+    justify-content: space-between; /* Space between cards */
+    gap: 2.5rem; /* Space between cards */
 }
 
-/* Flexbox for aligning items side by side */
 .my-row {
-    display: flex;
-    gap: 2rem; /* Adds space between the columns */
-    justify-content: space-between; /* Distributes columns evenly */
+    display: flex; /* Use flex for layout */
+    flex-wrap: wrap; /* Allow wrapping */
+    justify-content: space-between; /* Distribute space between cards */
+    gap: 2.5rem;
 }
 
 .my-col {
-    flex: 1; /* Ensures both columns take up equal space */
-    max-width: 48%; /* Prevents columns from getting too wide */
+    box-sizing: border-box; /* Include padding and border in total size */
+    flex: 1 1 250px; /* Flex property to adjust size and allow wrapping */
+    max-width: 300px; /* Maximum width for cards */
 }
 
 .port-card {
-    background-color: #ffffff;
+    background-image: linear-gradient(45deg, #74D7BB, #53C8B6, #35A99C); /* Colores vibrantes */
     border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
+    flex-direction: column; /* Para centrar el contenido */
+    justify-content: center; /* Centrar verticalmente */
+    align-items: center; /* Centrar horizontalmente */
+    height: 200px; /* Altura fija para las tarjetas */
+    padding: 1rem; /* Añadir padding interno a las tarjetas */
+    overflow: hidden; 
+}
+
+
+
+.coming-soon {
+    background-color: rgba(255, 255, 255, 0.8); /* White background with transparency */
+    text-align: center; /* Center text */
+}
+
+.coming-soon .greet-heading {
+    font-size: 1.5rem; /* Larger font size */
+    color: #fff; /* Text color */
+    margin: 0; /* No margin */
+    padding: 1rem; /* Internal padding */
 }
 
 .port-card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-5px); /* Elevation effect on hover */
 }
 
-.port-card .image {
-    width: 100%;
-    height: 250px; /* Same height for both video and image */
-    border-top-right-radius: 15px;
-    border-top-left-radius: 15px;
-    overflow: hidden;
+.image img {
+    width: 100%; /* Ensure images are responsive */
+    height: auto; /* Maintain aspect ratio */
 }
 
-.port-card .image img,
-.port-card .image video {
-    height: 100%;
-    width: 100%;
-    object-fit: cover; /* Makes sure the media fits nicely */
+/* Contact Section Styles */
+.contact {
+    background-color: #f9f9f9; /* Light background color */
+    padding: 4rem 5rem; /* Spacing around the section */
 }
 
-.greet-heading {
-    font-size: 1.3rem;
-    font-weight: bold;
-    color: #033073;
-    margin: 1rem 0;
-    text-align: center;
-}
-
-.greet-heading a:hover {
-    color: #06518D;
-    text-decoration: underline;
-}
-
-
-/* Adjust row for better layout */
-.my-row {
+.contact-content {
     display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    justify-content: space-around;
+    flex-direction: column; /* Stack items in column on small screens */
+    align-items: center; /* Center elements */
+    gap: 2rem; /* Space between items */
+    width: 100%; /* Ensure container takes full width */
+    padding: 1rem; /* Add padding around container */
 }
 
+.contact-form-container {
+    width: 100%; /* Full width on mobile */
+    max-width: 600px; /* Maximum width limit */
+    padding: 2rem; /* Add padding */
+    background-color: #f9f9f9; /* Light background */
+    border-radius: 10px; /* Rounded borders */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
 
+.form-group {
+    width: 100%; /* Ensure each group takes full width */
+    margin-bottom: 1rem; /* Space between form groups */
+}
+
+.contact-details {
+    width: 100%; /* Ensure contact details take full width */
+    max-width: 600px; /* Maximum width limit */
+    text-align: center; /* Center text */
+    padding: 1rem; /* Add padding */
+}
 
 /* Footer Styles */
 .footer { 
@@ -264,7 +289,7 @@ body {
     justify-content: center; 
     height: 50px; 
     width: 50px; 
-    margin: 1rem 1rem 0 1rem; 
+    margin: 1rem; 
     border-radius: 50%; 
     background-color: #00669c; 
 } 
@@ -290,23 +315,18 @@ body {
     list-style: none; 
 } 
 
-
-
-
-
-
-/* utility classes */
+/* Utility classes */
 .greet-heading { 
     font-size: 1.3rem; 
     font-weight: lighter;
-    color:#fff; 
+    color: #fff; 
     margin: 0; 
     letter-spacing: 1px; 
 } 
 
 .my-heading { 
     font-size: 2.5rem; 
-    color:#fff;
+    color: #fff;
     margin: 0; 
 } 
 
@@ -386,7 +406,6 @@ body {
     color: #363D73; 
 }
 
-
 /* Modal Styles */
 .modal {
     display: none; /* Hidden by default */
@@ -411,11 +430,10 @@ body {
 
 .modal-buttons {
     display: flex;
-    justify-content: center; /* Centramos los botones */
-    gap: 2rem; /* Añadimos separación de 2 rem entre los botones */
+    justify-content: center; /* Center buttons */
+    gap: 2rem; /* Space between buttons */
     margin-top: 1.5rem;
 }
-
 
 .modal-btn {
     padding: 10px 20px;
@@ -440,52 +458,3 @@ body {
     color: white;
     cursor: pointer;
 }
-
-
-.contact {
-    background-color: #f9f9f9; /* Color de fondo claro */
-    padding: 4rem 5rem; /* Espaciado alrededor de la sección */
-}
-
-.contact-content {
-    display: flex; /* Permite alinear los elementos hijos */
-    justify-content: space-between; /* Distribuye el espacio entre columnas */
-}
-
-.contact-form-container {
-    width: 60%; /* Ajusta el ancho según sea necesario */
-}
-
-.contact-form {
-    display: flex;
-    flex-direction: column; /* Organiza los elementos en una columna */
-}
-
-.form-controls {
-    margin-bottom: 1rem; /* Espaciado entre los campos */
-    padding: 10px; /* Espaciado interno */
-    border: 1px solid #ccc; /* Borde */
-    border-radius: 5px; /* Bordes redondeados */
-}
-
-.form-btn {
-    margin-top: 1rem; /* Espaciado superior para los botones */
-}
-    
-.contact-details {
-    width: 35%; /* Ajusta el ancho según sea necesario */
-    display: flex;
-    flex-direction: column; /* Organiza los elementos en una columna */
-}
-
-.contact-heading {
-    font-size: 1.2rem; /* Tamaño de fuente para los encabezados */
-    color: #333; /* Color del texto */
-}
-
-.contact-text {
-    font-size: 1rem; /* Tamaño de fuente para el texto */
-    color: #666; /* Color del texto */
-}
-
-
