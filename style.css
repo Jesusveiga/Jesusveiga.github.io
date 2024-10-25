@@ -326,7 +326,7 @@ body {
 
 /* Utility classes */
 .greet-heading { 
-    font-size: 1.3rem; 
+    font-size: 1.1rem; 
     font-weight: lighter;
     color: #fff; 
     margin: 0; 
@@ -466,4 +466,29 @@ body {
     font-size: 30px;
     color: white;
     cursor: pointer;
+}
+
+/* Overlay for hover effect */
+.my-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7); /* Fondo semitransparente */
+    color: #fff;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    opacity: 0; /* Oculto por defecto */
+    transform: translateY(100%); /* Desplazado hacia abajo */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    font-size: 0.9rem; /* Ajusta el tamaño según prefieras */
+}
+
+.my-card:hover .overlay {
+    opacity: 1; /* Visible al pasar el ratón */
+    transform: translateY(0); /* Sube para estar visible */
 }
