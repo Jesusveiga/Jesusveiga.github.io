@@ -54,74 +54,72 @@
         </div> 
     </section> 
 
-   <!-- Portfolio Section -->
-<section class="portfolio" id="portfolio" data-aos="fade-up" data-aos-duration="1000" style="padding-top: 70px;">
-    <div class="portfolio-heading"> 
-        <h1 class="my-heading text" style="color: #35A99C;">Portfolio</h1> 
-    </div> 
-    <div class="portfolio-content"> 
-        <div class="my-row"> 
-            <!-- First Portfolio Item -->
-            <div class="my-col" data-aos="fade-up" data-aos-duration="1000"> 
-                <a href="https://app.powerbi.com/groups/me/reports/9d9e5a13-58dd-47df-ab7c-15ebcb5c36c6/1719ef8bd8af929751c4?experience=power-bi" target="_blank">
-                    <div class="my-card port-card"> 
-                        <div class="image"> 
-                            <img src="CV.png" alt="Preview Image">
-                        </div> 
-                        <h3 class="greet-heading blue-text">Power BI CV</h3>
-                        <!-- Overlay for brief description -->
-                        <div class="overlay">
-                            <p>Interactive CV built with Power BI to showcase analytics skills and data storytelling.</p>
-                        </div>
-                    </div> 
-                </a>
-            </div>
-
-            <!-- Second Portfolio Item -->
-            <div class="my-col" data-aos="fade-up" data-aos-duration="1000"> 
-                <a href="#modal-survival" class="open-modal">
-                    <div class="my-card port-card"> 
-                        <div class="image"> 
-                            <img src="survival.png" alt="Survival Analysis Image"> 
-                        </div> 
-                        <h3 class="greet-heading blue-text">Survival Analysis on Lung Cancer Patients</h3>
-                        <div class="overlay">
-                            <p>Data-driven insights on lung cancer survival rates using statistical survival analysis.</p>
-                        </div>
-                    </div> 
-                </a>
-            </div>
-
-            <!-- Third Portfolio Item: New Project -->
-            <div class="my-col" data-aos="fade-up" data-aos-duration="1000"> 
-                <a href="LlamaProject.pdf" target="_blank">
-                    <div class="my-card port-card"> 
-                        <div class="image"> 
-                            <img src="Llama.png" alt="Llama Project Image">
-                        </div> 
-                        <h3 class="greet-heading blue-text">Analysis of PDF CVs (RShiny and LM Studio)</h3>
-                        <div class="overlay">
-                            <p>Automated PDF CV analysis using RShiny and LM Studio for streamlined data extraction.</p>
-                        </div>
-                    </div> 
-                </a>
-            </div>
-
-            <!-- Coming Soon Item -->
-            <div class="my-col" data-aos="fade-up" data-aos-duration="1000"> 
-                <div class="my-card port-card coming-soon"> 
-                    <div class="image"> 
-                        <h3 class="greet-heading blue-text">Coming Soon...</h3>
-                    </div> 
-                </div> 
-            </div>
+    <!-- Portfolio Section -->
+    <section class="portfolio" id="portfolio" data-aos="fade-up" data-aos-duration="1000" style="padding-top: 70px;">
+        <div class="portfolio-heading"> 
+            <h1 class="my-heading text" style="color: #35A99C;">Portfolio</h1> 
         </div> 
-    </div> 
-</section>
+        <div class="portfolio-content"> 
+            <div class="my-row"> 
+                <!-- First Portfolio Item -->
+                <div class="my-col" data-aos="fade-up" data-aos-duration="1000"> 
+                    <a href="https://app.powerbi.com/groups/me/reports/9d9e5a13-58dd-47df-ab7c-15ebcb5c36c6/1719ef8bd8af929751c4?experience=power-bi" target="_blank">
+                        <div class="my-card port-card"> 
+                            <div class="image"> 
+                                <img src="CV.png" alt="Preview Image">
+                            </div> 
+                            <h3 class="greet-heading blue-text">Power BI CV</h3>
+                            <!-- Overlay for brief description -->
+                            <div class="overlay">
+                                <p>Interactive CV built with Power BI to showcase analytics skills and data storytelling.</p>
+                            </div>
+                        </div> 
+                    </a>
+                </div>
 
-    
+                <!-- Second Portfolio Item -->
+                <div class="my-col" data-aos="fade-up" data-aos-duration="1000"> 
+                    <a href="#modal-survival" class="open-modal">
+                        <div class="my-card port-card"> 
+                            <div class="image"> 
+                                <img src="survival.png" alt="Survival Analysis Image"> 
+                            </div> 
+                            <h3 class="greet-heading blue-text">Survival Analysis on Lung Cancer Patients</h3>
+                            <div class="overlay">
+                                <p>Data-driven insights on lung cancer survival rates using statistical survival analysis.</p>
+                            </div>
+                        </div> 
+                    </a>
+                </div>
 
-    <!-- Modal Structure -->
+                <!-- Third Portfolio Item -->
+                <div class="my-col" data-aos="fade-up" data-aos-duration="1000"> 
+                    <a href="#modal-llama" class="open-modal">
+                        <div class="my-card port-card"> 
+                            <div class="image"> 
+                                <img src="Llama.png" alt="Llama Project Image">
+                            </div> 
+                            <h3 class="greet-heading blue-text">Analysis of PDF CVs (RShiny and LM Studio)</h3>
+                            <div class="overlay">
+                                <p>Automated PDF CV analysis using RShiny and LM Studio for streamlined data extraction.</p>
+                            </div>
+                        </div> 
+                    </a>
+                </div>
+
+                <!-- Coming Soon Item -->
+                <div class="my-col" data-aos="fade-up" data-aos-duration="1000"> 
+                    <div class="my-card port-card coming-soon"> 
+                        <div class="image"> 
+                            <h3 class="greet-heading blue-text">Coming Soon...</h3>
+                        </div> 
+                    </div> 
+                </div>
+            </div> 
+        </div> 
+    </section>
+
+    <!-- Modal Structure for Survival Analysis -->
     <div id="modal-survival" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
@@ -129,6 +127,18 @@
             <div class="modal-buttons">
                 <a href="SurvivalAnalysis No Code.pdf" target="_blank" class="modal-btn">Survival Analysis Document</a>
                 <a href="SurvivalAnalysis.pdf" target="_blank" class="modal-btn">Survival Analysis (Code included)</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Structure for Llama Project -->
+    <div id="modal-llama" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Select a Document</h2>
+            <div class="modal-buttons">
+                <a href="LlamaProject_No_Code.pdf" target="_blank" class="modal-btn">CV Analysis Document</a>
+                <a href="Shiny App.mp4" target="_blank" class="modal-btn">CV Analysis (RShiny DEMO)</a>
             </div>
         </div>
     </div>
@@ -148,8 +158,6 @@
                     Regarding web development, I used D3.js to create interactive graphics that would later appear in the SaaS. I am currently working as a Data Analyst, and in my current project, we are developing multiple dashboards and apps using SQL and Power BI, adapting the developments to the client's needs.
                 </p> 
             </div> 
-            <!-- Uncomment the below line to add an image in the About section -->
-            <!-- <div class="about-image"> <img src="image.png" alt="About Image"> </div> -->
         </div> 
     </section>
 
@@ -166,54 +174,43 @@
                         <input class="form-controls" type="email" placeholder="Your Email" required name="email"> 
                     </div>
                     <div class="form-group"> 
-                        <input class="form-controls" type="tel" placeholder="Your Phone" required name="phone"> 
+                        <input class="form-controls" type="tel" placeholder="Your Phone" name="phone"> 
                     </div>
                     <div class="form-group"> 
-                        <textarea class="form-controls" placeholder="Write your message" name="message" cols="30" rows="5" required></textarea> 
+                        <textarea class="form-controls" cols="30" rows="10" placeholder="Your Message" required name="message"></textarea> 
                     </div>
-                    <div class="form-buttons"> 
-                        <input type="submit" class="form-btn btn common-btn" value="Send Message"> 
-                        <input type="reset" class="form-btn btn" value="Clear"> 
+                    <div class="submit-btn"> 
+                        <button type="submit">Send</button> 
                     </div>
                 </form> 
-            </div> 
-            <div class="contact-details"> 
-                <h2 class="contact-heading">Contact Details</h2> 
-                <div class="details"> 
-                    <h5 class="details-heading">EMAIL</h5> 
-                    <p class="contact-text">jveigamorandeira@gmail.com</p> 
-                </div> 
-                <div class="details"> 
-                    <h5 class="details-heading">ADDRESS</h5> 
-                    <p>Lugo, Galicia, Spain</p> 
-                </div> 
             </div> 
         </div> 
     </section>
 
-    <!-- Footer section -->
-    <footer class="footer"> 
-        <div class="footer-content text-center">  
-            <div class="social-links"> 
-                <div class="footer-menu"> 
-                    <ul class="footer-menu-list"> 
-                        <li class="footer-list-items"> 
-                            <a class="footer-links" href="https://www.linkedin.com/in/jes%C3%BAs-veiga-morandeira-87bb96129/" target="_blank"> 
-                                <i class="fab fa-linkedin-in"></i> 
-                            </a> 
-                        </li> 
-                    </ul> 
-                </div> 
-            </div> 
-        </div> 
-    </footer> 
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" integrity="sha512-uKQ39gEGiyUJl4AI6L+ekBdGKpGw4xJ55+xyJG7YFlJokPNYegn9KwQ3P8A7aFQAUtUsAQHep+d/lrGqrbPIDQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script> <!-- AOS JS -->
-    <script>
-        AOS.init(); // Initialize AOS
-    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script> 
     <script src="script.js"></script> 
-</body> 
+    <script> 
+        // Initialize AOS (Animate On Scroll)
+        AOS.init();
 
+        // Modal functionality
+        document.querySelectorAll(".open-modal").forEach(link => {
+            link.onclick = function(event) {
+                event.preventDefault();
+                const targetModal = document.querySelector(this.getAttribute("href"));
+                targetModal.style.display = "block";
+            };
+        });
+        document.querySelectorAll(".close").forEach(closeBtn => {
+            closeBtn.onclick = function() {
+                this.closest(".modal").style.display = "none";
+            };
+        });
+        window.onclick = function(event) {
+            if (event.target.classList.contains("modal")) {
+                event.target.style.display = "none";
+            }
+        };
+    </script>
+</body> 
 </html>
