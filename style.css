@@ -509,11 +509,19 @@ body {
     max-width: 600px; /* Ajusta según el diseño */
     margin: auto;
     position: relative;
+    padding-bottom: 56.25%; /* Relación de aspecto 16:9 */
+    height: 0;
+    overflow: hidden;
 }
 
-.video-container video {
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: auto; /* Mantiene la proporción del video */
+    height: 100%;
+    border: none;
     border-radius: 8px; /* Opcional, redondea bordes */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Añade sombra */
 }
+
