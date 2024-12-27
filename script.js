@@ -54,6 +54,14 @@ document.querySelectorAll('.open-llama-modal').forEach(link => {
     };
 });
 
+
+// Open modal for "ARIMA" project
+document.querySelectorAll('.open-ARIMA-modal').forEach(link => {
+    link.onclick = function () {
+        openModal('modal-ARIMA');
+    };
+});
+
 // Close modals when clicking outside
 window.onclick = function (event) {
     const survivalModal = document.getElementById('modal-survival');
@@ -74,4 +82,9 @@ document.querySelector('#modal-survival .close').onclick = function () {
 // Close button for "Llama" modal
 document.querySelector('#modal-llama .close').onclick = function () {
     closeModal('modal-llama');
+};
+
+// Close button for "ARIMA" modal
+document.querySelector('#modal-ARIMA .close').onclick = function () {
+    closeModal('modal-ARIMA');
 };
