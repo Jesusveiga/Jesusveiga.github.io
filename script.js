@@ -74,6 +74,22 @@ window.onclick = function (event) {
     }
 };
 
+// Open ARIMA audio modal
+    function openAudioModal() {
+        document.getElementById("audioModal").style.display = "block";
+    }
+    
+    function closeAudioModal() {
+        document.getElementById("audioModal").style.display = "none";
+    }
+
+    // Cierra el modal si el usuario hace clic fuera de la ventana
+    window.onclick = function(event) {
+        if (event.target == document.getElementById("audioModal")) {
+            closeAudioModal();
+        }
+    }
+
 // Close button for "Survival" modal
 document.querySelector('#modal-survival .close').onclick = function () {
     closeModal('modal-survival');
